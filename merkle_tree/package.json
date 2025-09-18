@@ -1,0 +1,20 @@
+{
+  "name": "merkle-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "mocha": "^10.2.0",
+    "request": "^2.88.2",
+    "chai": "^4.3.10",
+    "ethereum-cryptography": "^2.1.2"
+  }
+}
