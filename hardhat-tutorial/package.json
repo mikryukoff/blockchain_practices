@@ -1,0 +1,25 @@
+{
+  "name": "hardhat-tutorial",
+  "version": "1.0.0",
+  "description": "Beginners guide to hardhat and wagmi dapp development. This is first step to Scaffold-2 understanding.",
+  "keywords": [
+    "hardhat",
+    "wagmi",
+    "dapp",
+    "scaffold-2"
+  ],
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.2"
+  }
+}
