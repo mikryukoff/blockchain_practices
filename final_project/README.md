@@ -1,80 +1,137 @@
-# 🏗 Scaffold-ETH 2
+# 🗳️ Децентрализованная Система Голосования
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+Полностью децентрализованное приложение для голосования, построенное на Ethereum с использованием **Scaffold-ETH 2**. Это приложение позволяет пользователям создавать опросы, голосовать по вариантам и управлять сессиями голосования прозрачным и доверительным способом.
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## ✨ Возможности
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+- **Создание опросов**: Создавайте пользовательские опросы с несколькими вариантами ответов
+- **Динамические варианты**: Добавляйте/удаляйте варианты голосования с помощью удобного интерфейса
+- **Голосование в реальном времени**: Голосуйте в активных опросах с мгновенной визуальной обратной связью
+- **Управление временем**: Устанавливайте длительность опроса с таймером обратного отсчета
+- **Контроль доступа**: Только создатели опросов могут завершить опрос до истечения времени
+- **Прозрачные результаты**: Просматривайте количество голосов и проценты в реальном времени
+- **Децентрализация**: Все данные хранятся в блокчейне
+- **Интеграция с кошельком**: Подключение через MetaMask или любой Web3-кошелек
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## 🛠️ Технологический стек
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+- **Фронтенд**: Next.js, React, TypeScript, Tailwind CSS
+- **Блокчейн**: Solidity, Hardhat, Ethers.js
+- **Web3**: Wagmi, Viem
+- **Разработка**: Фреймворк Scaffold-ETH 2
+- **Тестирование**: Chai, Mocha
 
-## Requirements
+## 📋 Предварительные требования
 
-Before you begin, you need to install the following tools:
+- Node.js (версия 18 или выше)
+- npm или yarn
+- MetaMask или любой Web3-кошелек
+- Git
 
-- [Node (>= v20.18.3)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+## 🚀 Быстрый старт
 
-## Quickstart
-
-To get started with Scaffold-ETH 2, follow the steps below:
-
-1. Install dependencies if it was skipped in CLI:
-
-```
-cd my-dapp-example
+### 1. Установите зависимости
+```bash
 yarn install
 ```
 
-2. Run a local network in the first terminal:
-
-```
+### 2. Запустите локальный блокчейн
+```bash
 yarn chain
 ```
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
-
-3. On a second terminal, deploy the test contract:
-
-```
+### 3. Разверните контракты
+В новом терминале:
+```bash
 yarn deploy
 ```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
-
-4. On a third terminal, start your NextJS app:
-
-```
+### 4. Запустите приложение
+В новом терминале:
+```bash
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+### 5. Откройте приложение
+Перейдите по адресу `http://localhost:3000` в вашем браузере.
 
-Run smart contract test with `yarn hardhat:test`
+## 🎮 Руководство по использованию
 
-- Edit your smart contracts in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
+### Создание опроса
+1. Подключите ваш кошелек
+2. Введите вопрос опроса
+3. Добавьте варианты ответов с помощью кнопки "+"
+4. Установите длительность с помощью слайдера
+5. Нажмите "Create Poll"
 
+### Голосование
+1. Просматривайте доступные опросы с помощью навигации
+2. Выберите вариант из выпадающего списка
+3. Нажмите "Vote", чтобы отправить ваш выбор
+4. Просматривайте результаты в реальном времени с индикаторами прогресса
 
-## Documentation
+### Управление опросами
+- **Как создатель**: Завершите опрос в любое время кнопкой "End Poll"
+- **Как участник**: Можете завершить опрос только после истечения времени
+- **Просмотр статистики**: Смотрите общее количество голосов, количество вариантов и статус опроса
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+## 📊 Смарт-контракт
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+### Контракт: `SimpleVoting.sol`
+Расположен в `packages/hardhat/contracts/Voting.sol`
 
-## Contributing to Scaffold-ETH 2
+**Основные функции:**
+- `createPoll()` - Создание нового опроса
+- `vote()` - Отправка голоса в активном опросе
+- `endPoll()` - Завершение опроса (только создатель или после истечения времени)
+- `getPollInfo()` - Получение информации об опросе
+- `hasAddressVoted()` - Проверка, голосовал ли адрес
 
-We welcome contributions to Scaffold-ETH 2!
+**Особенности контракта:**
+- Предотвращает двойное голосование
+- Автоматическое завершение опросов по времени
+- Управление привилегиями создателя
+- Прозрачный подсчет голосов
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+### Развернутый контракт
+После развертывания адрес контракта автоматически обновляется в:
+```
+packages/nextjs/contracts/deployedContracts.ts
+```
+
+## 📱 Скриншоты
+
+### Интерфейс приложения
+
+#### 1. Главная панель управления
+![Главная панель](/screenshots/dashboard.png)
+*Подключенный кошелек с формой создания опроса и активными опросами*
+
+#### 2. Создание опроса
+![Создание опроса](/screenshots/create-poll.png)
+*Создание нового опроса с динамическим добавлением вариантов*
+
+#### 3. Активное голосование
+![Активное голосование](/screenshots/voting.png)
+*Интерфейс голосования с индикаторами прогресса в реальном времени*
+
+#### 4. Результаты опроса
+![Результаты опроса](/screenshots/results.png)
+*Финальные результаты с распределением голосов*
+
+## 🙏 Благодарности
+
+- [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) за фреймворк разработки
+- [Hardhat](https://hardhat.org/) за среду разработки Ethereum
+- [Wagmi](https://wagmi.sh/) за React хуки для Ethereum
+- [Tailwind CSS](https://tailwindcss.com/) за утилиты стилизации
+
+---
+
+**Примечание**: Это демонстрационный проект для образовательных целей. Всегда проводите аудит смарт-контрактов перед развертыванием в основной сети.
+
+---
+
+<div align="center">
+Сделано с ❤️ с использованием Scaffold-ETH 2
+</div>
